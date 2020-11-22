@@ -6,20 +6,24 @@ public class PlayerControl : MonoBehaviour
 {
 	public float speed = 3.5f;
 	private float gravity = 10f;
-	private CharacterController controller ;
-	
-    // Start is called before the first frame update
-    void Start()
-    {
-			controller = GetComponent<CharacterController>();
-    }
+	private CharacterController controller;
 
-    // Update is called once per frame
-    void Update()
+	// Start is called before the first frame update
+	void Start()
+	{
+		controller = GetComponent<CharacterController>();
+	}
+
+	// Update is called once per frame
+	void Update()
     {
-       PlayerMovement(); 
-    }
-	
+		PlayerMovement();
+		if (Input.GetKey("Fire1"))
+		{ 
+			transform.position = transform.position + Camera.main.transform.forward * speed * Time.deltaTime;
+		}
+	}
+
 	void PlayerMovement()
 	{
 		float horizontal = Input.GetAxis("Horizontal");
@@ -28,6 +32,6 @@ public class PlayerControl : MonoBehaviour
 		Vector3 velocity = direction * speed;
 		velocity = Camera.main.transform.TransformDirection(velocity);
 		velocity.y -= gravity;
-		controller.Move(velocity*Time.deltaTime);
+		controller.Move(velocity * Time.deltaTime);
 	}
 }
