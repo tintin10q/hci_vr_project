@@ -10,8 +10,8 @@ public class ButtonController : MonoBehaviour
    public Transform removeBridge1;
    public Transform removeBridge2;
 
-   private Vector3 showPos = new Vector3(0, 0, 0);
-   private Vector3 awayPos = new Vector3(0, -20, 0);
+   private Vector3 showPos = new Vector3(8, 0, -5);
+    private Vector3 awayPos = new Vector3(8, -20, -5);
    
    
    public void ButtonPressCALLTHISONE_ONCLICK()
