@@ -18,10 +18,6 @@ public class PlayerControl : MonoBehaviour
 	void Update()
     {
 		PlayerMovement();
-		if (Input.GetKey("Fire1"))
-		{ 
-			transform.position = transform.position + Camera.main.transform.forward * speed * Time.deltaTime;
-		}
 	}
 
 	void PlayerMovement()

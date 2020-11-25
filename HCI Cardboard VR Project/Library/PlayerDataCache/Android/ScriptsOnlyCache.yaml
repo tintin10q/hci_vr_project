@@ -19,6 +19,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -58,40 +66,42 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11246}
     - Class: 114
-      Script: {instanceID: 11608}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 11940}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 12082}
+      Script: {instanceID: 11844}
     - Class: 114
-      Script: {instanceID: 12222}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12912}
+      Script: {instanceID: 12674}
     - Class: 114
-      Script: {instanceID: 12930}
+      Script: {instanceID: 12692}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 12814}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 12954}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 13430}
+      Script: {instanceID: 13194}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13214}
     - Class: 114
-      Script: {instanceID: 13552}
+      Script: {instanceID: 13316}
     - Class: 114
-      Script: {instanceID: 13560}
+      Script: {instanceID: 13324}
     - Class: 114
-      Script: {instanceID: 13600}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13630}
+      Script: {instanceID: 13394}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -301,7 +311,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 2df088ef7f277f1f6e1d29a93848cb9e
+      Hash: 626d9ecf0ba07a6c7f1d754ae0151ed4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TeleportTrigger
@@ -1040,5 +1050,5 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/OurSeneHCI.unity
-  playerPath: C:/Users/Robyn/Documents/School/CSAI/Projecten/hci_vr_project/controller
-    testing HCI/GameTest.apk
+  playerPath: C:/Users/Robyn/Documents/School/CSAI/Projecten/hci_vr_project/HCI Cardboard
+    VR Project/GameTest.apk

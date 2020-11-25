@@ -20,7 +20,7 @@ public class RailingController : MonoBehaviour
         else // Railing is off
         {
             pos = railingContainer.localPosition;
-            pos.y = -20;
+            pos.y = -40;
             railingContainer.localPosition = pos;
             GetComponent<Renderer>().material.color = Color.white;
         }
