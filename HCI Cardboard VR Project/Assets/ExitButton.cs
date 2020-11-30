@@ -4,10 +4,31 @@ using UnityEngine;
 
 public class ExitButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void ExitButtonPressCALLTHISONE_ONCLICK()
+    public bool gazedAt;
+    private float timer;
+    public float gazeTime = 1f;
+
+    private void Update()
     {
-        Debug.Log("Quit game.");
-        Application.Quit();
+        if (gazedAt)
+        {
+            timer += Time.deltaTime;
+            if (timer >= gazeTime)
+            {
+                Debug.Log("Quit game.");
+                Application.Quit();
+                timer = 0f;
+            }
+        }
+    }
+
+    public void PointerEnter()
+    {
+        gazedAt = true;
+    }
+
+    public void PointerExit()
+    {
+        gazedAt = false;
     }
 }

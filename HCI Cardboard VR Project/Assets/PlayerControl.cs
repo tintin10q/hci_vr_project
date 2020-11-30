@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
 	public Transform Player2;
 	public GameObject bs;
 
-	public float speed = 3.5f;
+	public float speed = 2f;
 	private float gravity = 10f;
 	private CharacterController controller;
 	
