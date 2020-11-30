@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     public Transform TeleportTarget;
 	public GameObject Player;
 	public Transform Player2;
+	public GameObject bs;
 
 	public float speed = 3.5f;
 	private float gravity = 10f;
@@ -26,7 +27,9 @@ public class PlayerControl : MonoBehaviour
 		PlayerMovement();        
 		if (Player2.localPosition.y < -3)
         {
+			bs.SetActive(true);
 			Player.transform.position = TeleportTarget.transform.position;
+			Invoke("GoBlack", 2);
 		}
 	}
 
@@ -39,5 +42,10 @@ public class PlayerControl : MonoBehaviour
 		velocity = Camera.main.transform.TransformDirection(velocity);
 		velocity.y -= gravity;
 		controller.Move(velocity * Time.deltaTime);
+	}
+
+	void GoBlack()
+	{
+		bs.SetActive(false);
 	}
 }

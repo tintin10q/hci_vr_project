@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ButtonController
+    - ExitButton
     - GvrEditorEmulator
     - GvrPointerInputModule
     - GvrPointerPhysicsRaycaster
@@ -22,10 +23,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -34,8 +33,11 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   sceneClasses:
-    Assets/Scenes/OurSeneHCI.unity:
+    Assets/Scenes/OurHCIGame.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -66,12 +68,14 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
-    - Class: 111
-      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11246}
     - Class: 114
+      Script: {instanceID: 11248}
+    - Class: 114
       Script: {instanceID: 11370}
+    - Class: 114
+      Script: {instanceID: 11506}
     - Class: 114
       Script: {instanceID: 11678}
     - Class: 114
@@ -89,6 +93,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12954}
     - Class: 114
+      Script: {instanceID: 13000}
+    - Class: 114
       Script: {instanceID: 13038}
     - Class: 114
       Script: {instanceID: 13194}
@@ -102,6 +108,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13364}
     - Class: 114
       Script: {instanceID: 13394}
+    - Class: 114
+      Script: {instanceID: 13418}
+    - Class: 114
+      Script: {instanceID: 17154}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -112,7 +122,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
     - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
@@ -311,7 +325,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 626d9ecf0ba07a6c7f1d754ae0151ed4
+      Hash: 1329c2cb6accd4ac3275c12acebaf791
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TeleportTrigger
@@ -857,7 +871,7 @@ ScriptsOnlyBuild:
     className: GvrPointerGraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: 33e21a4f84cbbdfa112c56e9f5dddbf5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerControl
@@ -965,6 +979,12 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExitButton
+  - hash:
+      serializedVersion: 2
       Hash: 4ef0f7d42cdb13479386e1f049c315aa
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -1049,6 +1069,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/OurSeneHCI.unity
+  - Assets/Scenes/OurHCIGame.unity
   playerPath: C:/Users/Robyn/Documents/School/CSAI/Projecten/hci_vr_project/HCI Cardboard
     VR Project/GameTest.apk
