@@ -17,13 +17,31 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       PlayerMovement(); 
+       if (Input.GetButton("Fire2") == true){
+	   PlayerMovementButton(); }
+	   else {PlayerMovementJoystick();}
+	   
     }
 	
-	void PlayerMovement()
+	void PlayerMovementButton()
+	{
+		//float horizontal = Input.GetAxis("Horizontal");
+		//float vertical =  0.5f;
+		
+		//Vector3 direction = new Vector3(0, 0, 1);
+		//Vector3 velocity = direction * speed;
+		//velocity = Camera.main.transform.TransformDirection(velocity);
+		//velocity.y -= gravity;
+		//controller.Move(velocity*Time.deltaTime);
+		Vector3 gomove = new Vector3(0, 0, speed) ;
+		Camera.main.transform.TransformDirection(gomove);
+	}
+	
+	void PlayerMovementJoystick()
 	{
 		float horizontal = Input.GetAxis("Horizontal");
 		float vertical = Input.GetAxis("Vertical");
+		
 		Vector3 direction = new Vector3(horizontal, 0, vertical);
 		Vector3 velocity = direction * speed;
 		velocity = Camera.main.transform.TransformDirection(velocity);
