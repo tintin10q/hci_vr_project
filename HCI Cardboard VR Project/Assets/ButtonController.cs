@@ -9,7 +9,10 @@ public class ButtonController : MonoBehaviour
     public Transform targetBridge;
     public Transform removeBridge1;
     public Transform removeBridge2;
-
+    
+    public AudioClip clip;
+    public float volume=1;
+    
     private Vector3 pos;
     private Vector3 pos2;
     private Vector3 pos3;
@@ -35,6 +38,7 @@ public class ButtonController : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= gazeTime)
             {
+                AudioSource.PlayClipAtPoint(clip, GetComponent<Transform>().position, volume);
                 if (targetBridge.localPosition.y < -1)
                 {
                     pos = targetBridge.localPosition;

@@ -5,9 +5,10 @@ using UnityEngine;
 public class RailingController : MonoBehaviour
 {
     public Transform railingContainer;
-    
-    private Vector3 pos;    
-    
+    public AudioClip clip;
+    public float volume=1;
+    private Vector3 pos;
+        
     public bool gazedAt;
     private float timer;
     public float gazeTime = 1f;
@@ -33,6 +34,7 @@ public class RailingController : MonoBehaviour
                     railingContainer.localPosition = pos;
                     GetComponent<Renderer>().material.color = Color.white;
                 }
+                AudioSource.PlayClipAtPoint(clip, GetComponent<Transform>().position, volume);
                 timer = 0f;
             }
         }

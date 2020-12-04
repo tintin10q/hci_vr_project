@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class PlayerControl : MonoBehaviour
 {
     public Transform TeleportTarget;
+    public Transform TeleportTarget1;
+    public Transform TeleportTarget2;
+    public Transform TeleportTarget3;
+    public Transform GlobalStorage;
+    
 	public GameObject Player;
 	public Transform Player2;
 	public GameObject bs;
@@ -28,7 +33,22 @@ public class PlayerControl : MonoBehaviour
 		if (Player2.localPosition.y < -3)
         {
 			bs.SetActive(true);
-			Player.transform.position = TeleportTarget.transform.position;
+			switch (GlobalStorage.position.y) // There must be some way to do globals for now this is it :\
+			{
+				case 0:
+					Player.transform.position = TeleportTarget.transform.position;
+					break;
+				case 1:
+					Player.transform.position = TeleportTarget1.transform.position;
+					break;
+				case 2:
+					Player.transform.position = TeleportTarget2.transform.position;
+					break;
+				case 3:
+					Player.transform.position = TeleportTarget3.transform.position;
+					break;
+			}
+			// Player.transform.position = TeleportTarget.transform.position;
 			Invoke("GoBlack", 2);
 		}
 	}
